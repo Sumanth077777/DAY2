@@ -1,18 +1,13 @@
-arr = [1, 2, 8, 3, 2, 2, 2, 5, 1];
-fr = [None] * len(arr);  
-visited = -1;  
-for i in range(0, len(arr)):  
-    count = 1;  
-    for j in range(i+1, len(arr)):  
-        if(arr[i] == arr[j]):  
-            count = count + 1;
-            fr[j] = visited;         
-    if(fr[i] != visited):  
-        fr[i] = count;
-        print("---------------------");  
-print(" Element | Frequency");  
-print("---------------------");  
-for i in range(0, len(fr)):  
-    if(fr[i] != visited):  
-        print("    " + str(arr[i]) + "    |    " + str(fr[i]));  
-print("---------------------");  
+a = int(input("Enter the no of element:"))
+b = []
+for i in range(a):
+    random_list=int(input("Enter the number:"))
+    b.append(random_list)
+    print("list of element:",b)
+    frequency={}
+    for item in b:
+        if item in frequency:
+         frequency[item]+=1
+    else:
+            frequency[item]=1
+            print("Elements:frequency",frequency);
